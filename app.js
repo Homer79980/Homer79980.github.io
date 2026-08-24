@@ -11,7 +11,8 @@
     "ps2unreal": "UE",
     "engine-installer": "EX",
     "ps-link": "PL",
-    "pixel-color-bleed": "PB"
+    "pixel-color-bleed": "PB",
+    "ps-slicer": "SC"
   };
 
   function downloadAction(product) {

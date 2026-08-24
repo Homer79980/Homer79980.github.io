@@ -122,19 +122,16 @@
       "assets": ["pixel-color-bleed-0.1.1.ccx"]
     },
     {
-      "id": "ai-rename-pro-studio",
-      "name": "AI Rename Pro Studio",
-      "kind": "tool",
-      "version": "2.0.5",
-      "supportedHosts": ["Windows"],
-      "description": "批量整理图片与 PSD/PSB 素材，支持规则命名、AI 智能命名、格式转换和画布处理。",
-      "releaseRepository": "LeoWalker023/AI-Rename-Pro-Studio-Releases",
-      "releaseTag": "v2.0.5",
-      "releaseUrl": "https://github.com/LeoWalker023/AI-Rename-Pro-Studio-Releases/releases/tag/v2.0.5",
-      "assets": [
-        "AI-Rename-Pro-Studio-2.0.5.exe",
-        "AI-Rename-Pro-Studio-2.0.5.exe.sha256"
-      ]
+      "id": "ps-slicer",
+      "name": "PS 切图工具",
+      "kind": "photoshop-exporter",
+      "version": "1.0.28",
+      "supportedHosts": ["Photoshop 24.4+"],
+      "description": "把图层中互不连接的内容智能或严格拆分，支持图层组、固定尺寸、选区、参考线和 PNG-only 导出。",
+      "releaseRepository": "Homer79980/ps-slicer-releases",
+      "releaseTag": "v1.0.28",
+      "releaseUrl": "https://github.com/Homer79980/ps-slicer-releases/releases/tag/v1.0.28",
+      "assets": ["com.tu.ps-slicer_PS.ccx"]
     }
   ]
 }
