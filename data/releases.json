@@ -125,12 +125,12 @@
       "id": "ps-slicer",
       "name": "PS 切图工具",
       "kind": "photoshop-exporter",
-      "version": "1.0.28",
+      "version": "1.0.29",
       "supportedHosts": ["Photoshop 24.4+"],
       "description": "把图层中互不连接的内容智能或严格拆分，支持图层组、固定尺寸、选区、参考线和 PNG-only 导出。",
       "releaseRepository": "Homer79980/ps-slicer-releases",
-      "releaseTag": "v1.0.28",
-      "releaseUrl": "https://github.com/Homer79980/ps-slicer-releases/releases/tag/v1.0.28",
+      "releaseTag": "v1.0.29",
+      "releaseUrl": "https://github.com/Homer79980/ps-slicer-releases/releases/tag/v1.0.29",
       "assets": ["com.tu.ps-slicer_PS.ccx"]
     }
   ]
