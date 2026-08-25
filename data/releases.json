@@ -122,15 +122,27 @@
       "assets": ["pixel-color-bleed-0.1.1.ccx"]
     },
     {
+      "id": "ai-rename-pro-studio",
+      "name": "AI Rename Pro Studio",
+      "kind": "asset-tool",
+      "version": "2.0.5",
+      "supportedHosts": ["Windows"],
+      "description": "批量整理图片、PSD 与 PSB 素材，用规则或视觉模型生成可读名称，并在执行前逐项确认结果。",
+      "releaseRepository": "LeoWalker023/AI-Rename-Pro-Studio-Releases",
+      "releaseTag": "v2.0.5",
+      "releaseUrl": "https://github.com/LeoWalker023/AI-Rename-Pro-Studio-Releases/releases/tag/v2.0.5",
+      "assets": ["AI-Rename-Pro-Studio-2.0.5.exe", "AI-Rename-Pro-Studio-2.0.5.exe.sha256"]
+    },
+    {
       "id": "ps-slicer",
       "name": "PS 切图工具",
       "kind": "photoshop-exporter",
-      "version": "1.0.31",
+      "version": "1.0.32",
       "supportedHosts": ["Photoshop 24.4+"],
       "description": "把图层中互不连接的内容智能或严格拆分，支持图层组、固定尺寸、选区、参考线、压缩 PNG ImageBlob 跨 Windows/macOS 校对缩略图和一键分析校对。",
       "releaseRepository": "Homer79980/ps-slicer-releases",
-      "releaseTag": "v1.0.31",
-      "releaseUrl": "https://github.com/Homer79980/ps-slicer-releases/releases/tag/v1.0.31",
+      "releaseTag": "v1.0.32",
+      "releaseUrl": "https://github.com/Homer79980/ps-slicer-releases/releases/tag/v1.0.32",
       "assets": ["com.tu.ps-slicer_PS.ccx"]
     }
   ]
