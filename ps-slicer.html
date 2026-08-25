@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#111518" />
-    <meta name="description" content="PS 切图工具：在 Photoshop 中把互不连接的图层内容智能或严格拆分并导出 PNG。" />
+    <meta name="description" content="PS 切图工具：在 Photoshop 中快速完成切图区域分析、校对、尺寸设置和 PNG 导出。" />
     <title>PS 切图工具 | PS2UI Studio</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -17,7 +17,6 @@
         <a href="./ps-link.html">PS-Link</a>
         <a href="./pixel-color-bleed.html">Pixel Color Bleed</a>
         <a class="current" href="./ps-slicer.html" aria-current="page">PS 切图工具</a>
-        <a href="./ai-rename.html">AI Rename</a>
         <a href="https://leowalker023.github.io/lnspiration/" target="_blank" rel="noreferrer">探索更多</a>
       </nav>
       <a class="header-link" href="https://github.com/Homer79980/ps-slicer-releases/releases/latest" target="_blank" rel="noreferrer">下载 <span aria-hidden="true">↓</span></a>
@@ -27,8 +26,8 @@
       <section class="tool-page-hero section-shell">
         <div class="tool-page-copy">
           <p class="eyebrow">PS SLICER / 1.0.32</p>
-          <h1>把一个图层，拆成可以直接用的 PNG。</h1>
-          <p class="hero-lead">PS 切图工具在 Photoshop 中识别互不连接的内容，支持智能拆分、严格拆分、图层组、选区、参考线、固定尺寸和偶数尺寸输出。分析有歧义时，可以在真实缩略图预览中直接校对。</p>
+          <h1>在 Photoshop 中，快速完成切图。</h1>
+          <p class="hero-lead">PS 切图工具把常用切图步骤集中到同一面板，支持按内容、图层组、选区和参考线切图，可设置固定尺寸和偶数尺寸，并在导出前用真实缩略图快速校对。</p>
           <div class="hero-actions"><a class="button button-primary" href="https://github.com/Homer79980/ps-slicer-releases/releases/download/v1.0.32/com.tu.ps-slicer_PS.ccx">直接下载 CCX <span aria-hidden="true">↓</span></a><a class="button button-quiet" href="https://homer79980.github.io/ps-slicer-releases/" target="_blank" rel="noreferrer">查看视频演示 ↗</a></div>
           <div class="hero-facts" aria-label="PS 切图工具信息"><span><strong>1.0.32</strong> 当前版本</span><span><strong>PNG-only</strong> 默认导出</span><span><strong>24.4+</strong> Photoshop</span></div>
         </div>
@@ -47,7 +46,7 @@
       </section>
 
       <section class="section-shell tool-detail-grid">
-        <article class="tool-detail"><span class="guide-kicker">01 / SPLIT</span><h3>智能或严格拆分</h3><p>智能拆分可以把文字和紧邻的小点视为同一视觉单元；严格拆分则把每个互不连接的 Alpha 区域独立输出。</p></article>
+        <article class="tool-detail"><span class="guide-kicker">01 / SPLIT</span><h3>灵活选择切图方式</h3><p>按内容切图可以智能合并文字和紧邻的小点；也可以切换严格模式，更精确地控制切图区域。</p></article>
         <article class="tool-detail"><span class="guide-kicker">02 / LAYERS</span><h3>图层组也能直接处理</h3><p>选中一个组会递归处理组内可见末级图层；需要先合成再拆分时，开启“合并选中图层后处理”。</p></article>
         <article class="tool-detail"><span class="guide-kicker">03 / OUTPUT</span><h3>固定尺寸和偶数尺寸</h3><p>内容不足时补透明边缘并居中，内容超出时等比缩放；奇数宽高可以自动补成偶数。</p></article>
         <article class="tool-detail"><span class="guide-kicker">04 / REVIEW</span><h3>分析校对一步完成</h3><p>点击一次“分析校对”即可打开真实缩略图预览，直接选择、合并、拆分、忽略，再应用到 PSD 或导出 PNG。</p></article>
@@ -61,7 +60,7 @@
         <div class="ps-slicer-demo-grid">
           <article class="ps-slicer-demo">
             <video controls preload="metadata" playsinline poster="./assets/ps-slicer-main-panel.png"><source src="./assets/ps-slicer-demo-01.mp4" type="video/mp4" />你的浏览器不支持 HTML5 视频播放。</video>
-            <div class="ps-slicer-demo-copy"><span class="panel-shot-kicker">01 / CONTENT SPLIT</span><h3>按内容拆分与导出</h3><p>识别一个图层中互不连接的内容，并直接生成独立 PNG。</p><a class="video-download" href="./assets/ps-slicer-demo-01.mp4" download>下载高清演示视频 ↗</a></div>
+            <div class="ps-slicer-demo-copy"><span class="panel-shot-kicker">01 / CONTENT SPLIT</span><h3>快速分析与切图</h3><p>分析当前图层的可用切图区域，校对后直接完成 PNG 导出。</p><a class="video-download" href="./assets/ps-slicer-demo-01.mp4" download>下载高清演示视频 ↗</a></div>
           </article>
           <article class="ps-slicer-demo">
             <video controls preload="metadata" playsinline poster="./assets/ps-slicer-review.png"><source src="./assets/ps-slicer-demo-02.mp4" type="video/mp4" />你的浏览器不支持 HTML5 视频播放。</video>
@@ -77,7 +76,7 @@
           </article>
           <article class="ps-slicer-demo">
             <video controls preload="metadata" playsinline poster="./assets/ps-slicer-export.jpg"><source src="./assets/ps-slicer-demo-05.mp4" type="video/mp4" />你的浏览器不支持 HTML5 视频播放。</video>
-            <div class="ps-slicer-demo-copy"><span class="panel-shot-kicker">05 / EXPORT FOLDER</span><h3>选择导出目录</h3><p>选择输出位置，准备把结果导出为独立 PNG。</p><a class="video-download" href="./assets/ps-slicer-demo-05.mp4" download>下载高清演示视频 ↗</a></div>
+            <div class="ps-slicer-demo-copy"><span class="panel-shot-kicker">05 / EXPORT FOLDER</span><h3>选择导出目录</h3><p>选择输出位置，准备将切图结果导出为 PNG。</p><a class="video-download" href="./assets/ps-slicer-demo-05.mp4" download>下载高清演示视频 ↗</a></div>
           </article>
           <article class="ps-slicer-demo">
             <video controls preload="metadata" playsinline poster="./assets/ps-slicer-main-panel.png"><source src="./assets/ps-slicer-demo-06.mp4" type="video/mp4" />你的浏览器不支持 HTML5 视频播放。</video>
@@ -93,7 +92,7 @@
           </article>
           <article class="ps-slicer-demo">
             <video controls preload="metadata" playsinline poster="./assets/ps-slicer-export.jpg"><source src="./assets/ps-slicer-demo-09.mp4" type="video/mp4" />你的浏览器不支持 HTML5 视频播放。</video>
-            <div class="ps-slicer-demo-copy"><span class="panel-shot-kicker">09 / PNG RESULTS</span><h3>查看 PNG 导出结果</h3><p>打开导出目录，检查生成的独立 PNG 文件。</p><a class="video-download" href="./assets/ps-slicer-demo-09.mp4" download>下载高清演示视频 ↗</a></div>
+            <div class="ps-slicer-demo-copy"><span class="panel-shot-kicker">09 / PNG RESULTS</span><h3>查看 PNG 导出结果</h3><p>打开导出目录，检查生成的 PNG 文件。</p><a class="video-download" href="./assets/ps-slicer-demo-09.mp4" download>下载高清演示视频 ↗</a></div>
           </article>
           <article class="ps-slicer-demo">
             <video controls preload="metadata" playsinline poster="./assets/ps-slicer-main-panel.png"><source src="./assets/ps-slicer-demo-10.mp4" type="video/mp4" />你的浏览器不支持 HTML5 视频播放。</video>
@@ -114,7 +113,7 @@
         <div class="panel-gallery ps-slicer-gallery">
           <figure class="panel-shot"><div class="panel-shot-image"><a href="./assets/ps-slicer-main-panel.png" target="_blank" rel="noreferrer"><img src="./assets/ps-slicer-main-panel.png" loading="lazy" alt="PS 切图工具主面板" /></a></div><figcaption><span class="panel-shot-kicker">01 / ANALYZE</span><strong>选择拆分方式</strong><span>按内容、选区或参考线开始分析。</span></figcaption></figure>
           <figure class="panel-shot"><div class="panel-shot-image"><a href="./assets/ps-slicer-review.png" target="_blank" rel="noreferrer"><img src="./assets/ps-slicer-review.png" loading="lazy" alt="PS 切图工具校对分割结果窗口" /></a></div><figcaption><span class="panel-shot-kicker">02 / REVIEW</span><strong>真实缩略图校对</strong><span>直接选择、合并、拆分或忽略结果。</span></figcaption></figure>
-          <figure class="panel-shot"><div class="panel-shot-image"><a href="./assets/ps-slicer-export.jpg" target="_blank" rel="noreferrer"><img src="./assets/ps-slicer-export.jpg" loading="lazy" alt="PS 切图工具导出 PNG 文件夹" /></a></div><figcaption><span class="panel-shot-kicker">03 / EXPORT</span><strong>导出独立 PNG</strong><span>切开、导出或切开并导出，一次完成。</span></figcaption></figure>
+          <figure class="panel-shot"><div class="panel-shot-image"><a href="./assets/ps-slicer-export.jpg" target="_blank" rel="noreferrer"><img src="./assets/ps-slicer-export.jpg" loading="lazy" alt="PS 切图工具导出 PNG 文件夹" /></a></div><figcaption><span class="panel-shot-kicker">03 / EXPORT</span><strong>快速导出 PNG</strong><span>切开、导出或切开并导出，一次完成。</span></figcaption></figure>
         </div>
       </section>
     </main>
