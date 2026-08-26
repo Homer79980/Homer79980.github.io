@@ -24,11 +24,11 @@
     <main id="top">
       <section class="tool-page-hero section-shell">
         <div class="tool-page-copy">
-          <p class="eyebrow">PS SLICER / 1.0.32</p>
+          <p class="eyebrow">PS SLICER / 1.0.37</p>
           <h1>在 Photoshop 中，快速完成切图。</h1>
           <p class="hero-lead">PS 切图工具把常用切图步骤集中到同一面板，支持按内容、图层组、选区和参考线切图，可设置固定尺寸和偶数尺寸，并在导出前用真实缩略图快速校对。</p>
-          <div class="hero-actions"><a class="button button-primary" href="https://github.com/Homer79980/ps-slicer-releases/releases/download/v1.0.32/com.tu.ps-slicer_PS.ccx">直接下载 CCX <span aria-hidden="true">↓</span></a><a class="button button-quiet" href="https://homer79980.github.io/ps-slicer-releases/" target="_blank" rel="noreferrer">查看视频演示 ↗</a></div>
-          <div class="hero-facts" aria-label="PS 切图工具信息"><span><strong>1.0.32</strong> 当前版本</span><span><strong>PNG-only</strong> 默认导出</span><span><strong>24.4+</strong> Photoshop</span></div>
+          <div class="hero-actions"><a class="button button-primary" href="https://github.com/Homer79980/ps-slicer-releases/releases/download/v1.0.37/com.tu.ps-slicer_PS.ccx">直接下载 CCX <span aria-hidden="true">↓</span></a><a class="button button-quiet" href="#demo-gif">查看实机演示 ↘</a></div>
+          <div class="hero-facts" aria-label="PS 切图工具信息"><span><strong>1.0.37</strong> 当前版本</span><span><strong>PNG-only</strong> 默认导出</span><span><strong>24.4+</strong> Photoshop</span></div>
         </div>
         <div class="tool-page-visual ps-slicer-visual"><a href="./assets/ps-slicer-main-panel.png" target="_blank" rel="noreferrer"><img src="./assets/ps-slicer-main-panel.png" alt="PS 切图工具 Photoshop 主面板，显示切图方式、固定尺寸和导出区域" /></a></div>
       </section>
@@ -38,17 +38,27 @@
           <p class="eyebrow">DOWNLOAD</p>
           <h2>下载一个 CCX，安装后就能开始切图</h2>
           <p>双击 CCX 完成安装，重启 Photoshop 后从“增效工具 &gt; 切图工具”打开。终端用户不需要 Node.js 或 UXP 开发工具。</p>
-          <div class="tool-download-actions"><a class="button button-primary" href="https://github.com/Homer79980/ps-slicer-releases/releases/download/v1.0.32/com.tu.ps-slicer_PS.ccx">下载 v1.0.32 CCX</a><a class="button button-quiet" href="https://github.com/Homer79980/ps-slicer-releases/releases/tag/v1.0.32" target="_blank" rel="noreferrer">查看 Release ↗</a></div>
-          <p class="tool-note">Windows 11 + Photoshop 27.8.0 已验证；最低支持 Photoshop 24.4。v1.0.32 修复 UXP 原生按钮皮肤遮挡校对缩略图，并按宿主 JPEG/base64、PNG Data URL、PNG ImageBlob、原始 ImageBlob 逐级回退。</p>
+          <div class="tool-download-actions"><a class="button button-primary" href="https://github.com/Homer79980/ps-slicer-releases/releases/download/v1.0.37/com.tu.ps-slicer_PS.ccx">下载 v1.0.37 CCX</a><a class="button button-quiet" href="https://github.com/Homer79980/ps-slicer-releases/releases/tag/v1.0.37" target="_blank" rel="noreferrer">查看 Release ↗</a></div>
+          <p class="tool-note">Windows 11 + Photoshop 27.8.0 已验证；最低支持 Photoshop 24.4。v1.0.37 将智能拆分收敛为 0–100 拆分强度：0 为严格拆分，按内容且大于 0 时自动识别高置信度纯色背景。</p>
         </div>
-        <aside class="download-spec" aria-label="PS 切图工具版本信息"><span>CURRENT RELEASE</span><strong>PS 切图工具 1.0.32</strong><small>Photoshop 24.4+<br />70,057 bytes · CCX 安装包</small></aside>
+        <aside class="download-spec" aria-label="PS 切图工具版本信息"><span>CURRENT RELEASE</span><strong>PS 切图工具 1.0.37</strong><small>Photoshop 24.4+<br />73,916 bytes · CCX 安装包</small></aside>
       </section>
 
       <section class="section-shell tool-detail-grid">
-        <article class="tool-detail"><span class="guide-kicker">01 / SLICE</span><h3>灵活选择切图方式</h3><p>按内容切图可以智能合并文字和紧邻的小点；也可以切换严格模式，更精确地控制切图区域。</p></article>
+        <article class="tool-detail"><span class="guide-kicker">01 / SLICE</span><h3>一个滑杆控制拆分强度</h3><p>按内容切图时，0 为严格拆分；向右提高智能强度，自动合并具有共同视觉关系的碎片，并识别高置信度纯色背景。</p></article>
         <article class="tool-detail"><span class="guide-kicker">02 / LAYERS</span><h3>图层组也能直接处理</h3><p>选中一个组会递归处理组内可见末级图层；需要先合成再处理时，开启“合并选中图层后处理”。</p></article>
         <article class="tool-detail"><span class="guide-kicker">03 / OUTPUT</span><h3>固定尺寸和偶数尺寸</h3><p>内容不足时补透明边缘并居中，内容超出时等比缩放；奇数宽高可以自动补成偶数。</p></article>
         <article class="tool-detail"><span class="guide-kicker">04 / REVIEW</span><h3>分析校对一步完成</h3><p>点击一次“分析校对”即可打开真实缩略图预览，直接选择、合并、调整或忽略，再应用到 PSD 或导出 PNG。</p></article>
+      </section>
+
+      <section id="demo-gif" class="section-shell ps-slicer-showcase">
+        <div class="panel-gallery-heading">
+          <div><p class="eyebrow">LATEST WORKFLOW</p><h2>7.9 秒看懂当前版本的完整操作</h2></div>
+          <p>这段 GIF 来自 Photoshop 实机录屏，展示从选中图层、设置拆分强度到分析校对和导出的连续流程。</p>
+        </div>
+        <div class="panel-gallery ps-slicer-gallery">
+          <figure class="panel-shot" style="grid-column: 1 / -1"><div class="panel-shot-image"><a href="./assets/ps-slicer-workflow.gif" target="_blank" rel="noreferrer"><img src="./assets/ps-slicer-workflow.gif" loading="lazy" alt="PS 切图工具 1.0.37 Photoshop 实机操作演示 GIF" /></a></div><figcaption><span class="panel-shot-kicker">01 / LIVE WORKFLOW</span><strong>从选层到导出，一次看懂</strong><span>包含按内容切图、0–100 拆分强度、分析校对和 PNG 导出。</span><a class="video-download" href="./assets/ps-slicer-workflow.gif" download>下载 GIF 演示 ↗</a></figcaption></figure>
+        </div>
       </section>
 
       <section id="demos" class="section-shell ps-slicer-demos">
