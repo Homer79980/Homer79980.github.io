@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#111518" />
+    <meta name="description" content="离线抠图：在 Photoshop 内本地优先移除纯色与近纯色背景，并提供边缘精修和批量输出。" />
+    <title>离线抠图 | PS2UI Studio</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="tool-page">
+    <header class="site-header">
+      <a class="wordmark" href="./" aria-label="PS2UI Studio 首页"><span class="wordmark-mark">P2</span><span>PS2UI <em>Studio</em></span></a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="./">首页</a>
+        <a href="https://homer79980.github.io/PS2UI/">PS2UI</a>
+        <a href="./ps-link.html">PS-Link</a>
+        <a href="./pixel-color-bleed.html">Pixel Color Bleed</a>
+        <a href="./ps-slicer.html">PS 切图工具</a>
+        <a class="current" href="./ps-offline-mask.html" aria-current="page">离线抠图</a>
+      </nav>
+      <a class="header-link" href="https://leowalker023.github.io/lnspiration/" target="_blank" rel="noreferrer">探索更多 <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="top">
+      <section class="tool-page-hero section-shell">
+        <div class="tool-page-copy">
+          <p class="eyebrow">PS OFFLINE MASK / 0.1.0</p>
+          <h1>在 Photoshop 里，把背景干净地拿掉。</h1>
+          <p class="hero-lead">离线抠图优先在本机分析透明、棋盘格、纯色与近纯色背景，建立连续 Alpha，并清理绿幕、蓝幕和白底造成的边缘残色。复杂图片可以接入视觉模型提供主体先验，但最终质量门和边缘合成都留在本地完成。</p>
+          <div class="hero-actions"><a class="button button-primary" href="https://github.com/Homer79980/ps-offline-mask-releases/releases/download/v0.1.0/ps-offline-mask-0.1.0.ccx">下载 v0.1.0 CCX <span aria-hidden="true">↓</span></a><a class="button button-quiet" href="#install">查看安装步骤 ↘</a></div>
+          <div class="hero-facts" aria-label="离线抠图信息"><span><strong>0.1.0</strong> 当前版本</span><span><strong>LOCAL-FIRST</strong> 默认不上传</span><span><strong>25.0+</strong> Photoshop</span></div>
+        </div>
+        <div class="tool-page-visual"><a href="./assets/ps-offline-mask-refine.png" target="_blank" rel="noreferrer"><img src="./assets/ps-offline-mask-refine.png" alt="离线抠图精修工作区，显示图像预览、视图切换和边缘参数" /></a></div>
+      </section>
+
+      <section id="download" class="section-shell tool-download">
+        <div class="tool-download-copy">
+          <p class="eyebrow">DOWNLOAD</p>
+          <h2>一个 CCX，包含本地抠图和精修工作流</h2>
+          <p>下载后先尝试双击安装。当前 CCX 尚未经过 Adobe Marketplace 签名；若 Creative Cloud 拒绝未签名包，可使用 UXP Developer Tool 加载同一安装包内的插件目录。</p>
+          <div class="tool-download-actions"><a class="button button-primary" href="https://github.com/Homer79980/ps-offline-mask-releases/releases/download/v0.1.0/ps-offline-mask-0.1.0.ccx">直接下载 CCX</a><a class="button button-quiet" href="https://github.com/Homer79980/ps-offline-mask-releases/releases/tag/v0.1.0" target="_blank" rel="noreferrer">版本与校验值 ↗</a></div>
+          <p class="tool-note">安装包支持 Photoshop 25.0+。默认走本地算法；只有在 AI 设置中主动配置服务、授权外发且本地结果需要辅助时，单张图片才会发送给视觉服务。</p>
+        </div>
+        <aside class="download-spec" aria-label="离线抠图版本信息"><span>CURRENT RELEASE</span><strong>离线抠图 0.1.0</strong><small>Photoshop 25.0+<br />CCX · SHA-256 可校验</small></aside>
+      </section>
+
+      <section class="section-shell tool-detail-grid">
+        <article class="tool-detail"><span class="guide-kicker">01 / DETECT</span><h3>先判断背景类型</h3><p>透明图直接沿用原 Alpha；纯色与近纯色图从画布边界估计背景分布，并识别与外边缘不连通的内部孔洞。</p></article>
+        <article class="tool-detail"><span class="guide-kicker">02 / MATTE</span><h3>生成连续 Alpha</h3><p>颜色距离、连通区域和主体先验共同约束蒙版，边缘保留抗锯齿与半透明过渡，不只输出生硬的黑白轮廓。</p></article>
+        <article class="tool-detail"><span class="guide-kicker">03 / CLEAN</span><h3>清理屏幕色污染</h3><p>对绿幕、蓝幕和白底边缘做受控去色，使用可靠主体颜色重建半透明边缘，减少亮边和绿色残线。</p></article>
+        <article class="tool-detail"><span class="guide-kicker">04 / VERIFY</span><h3>多背景检查后应用</h3><p>在透明、白、黑和自定义背景上检查结果；低置信度候选会停在预览或精修阶段，不静默写回图层。</p></article>
+      </section>
+
+      <section id="install" class="section-shell ps-slicer-showcase">
+        <div class="panel-gallery-heading">
+          <div><p class="eyebrow">INSTALLATION</p><h2>安装与升级</h2></div>
+          <p>先停止并移除旧实例，避免 Photoshop 同时加载两个版本。</p>
+        </div>
+        <div class="tool-detail-grid">
+          <article class="tool-detail"><span class="guide-kicker">01 / DOWNLOAD</span><h3>下载并校验</h3><p>从 v0.1.0 Release 下载 CCX；需要校验时，对照同一 Release 中的 SHA256SUMS.txt。</p></article>
+          <article class="tool-detail"><span class="guide-kicker">02 / INSTALL</span><h3>先双击 CCX</h3><p>让 Creative Cloud 完成安装，重启 Photoshop 后从“增效工具”菜单打开“离线抠图”。</p></article>
+          <article class="tool-detail"><span class="guide-kicker">03 / DEV LOAD</span><h3>未签名包的备用安装</h3><p>若 Creative Cloud 拒绝安装，把 CCX 复制并改名为 ZIP，解压后在 UXP Developer Tool 中 Add Plugin，选择根目录的 manifest.json，再点击 Load。</p></article>
+          <article class="tool-detail"><span class="guide-kicker">04 / UPDATE</span><h3>升级不覆盖旧目录</h3><p>在 UXP Developer Tool 中 Stop 并移除旧版本，再加载新目录。菜单中应只保留一个“离线抠图”入口。</p></article>
+        </div>
+      </section>
+
+      <section class="section-shell ps-slicer-showcase">
+        <div class="panel-gallery-heading">
+          <div><p class="eyebrow">WORKFLOW</p><h2>从当前图层到透明结果</h2></div>
+          <p>所有计算先进入预览，点击“应用”前不会修改当前图层。</p>
+        </div>
+        <div class="panel-gallery">
+          <figure class="panel-shot"><div class="panel-shot-image"><a href="./assets/ps-offline-mask-panel.png" target="_blank" rel="noreferrer"><img src="./assets/ps-offline-mask-panel.png" loading="lazy" alt="离线抠图 Photoshop 主面板结构预览" /></a></div><figcaption><span class="panel-shot-kicker">01 / ONE CLICK</span><strong>选中像素图层并一键抠图</strong><span>插件自动读取当前图层；同一图层内容变化后可手动刷新。</span></figcaption></figure>
+          <figure class="panel-shot" style="grid-column: span 2"><div class="panel-shot-image"><a href="./assets/ps-offline-mask-refine.png" target="_blank" rel="noreferrer"><img src="./assets/ps-offline-mask-refine.png" loading="lazy" alt="离线抠图 Photoshop 精修工作区结构预览" /></a></div><figcaption><span class="panel-shot-kicker">02 / REFINE</span><strong>切换背景检查并调整边缘</strong><span>必要时调整收缩、柔边、硬边或去色边；重新计算后确认并应用。</span></figcaption></figure>
+        </div>
+      </section>
+
+      <section class="section-shell tool-explanation">
+        <div><p class="eyebrow">AI ASSIST</p><h2>AI 负责理解主体，本地算法负责像素边缘。</h2></div>
+        <p>普通多模态大模型可以判断主体位置、背景类型和疑难区域，但不能仅靠文字回答生成可靠的 2048×2048 Alpha。插件只接受结构化的主体先验或可验证 Alpha 候选，再与本地色度键、连通性、边缘重建和质量门合并。没有配置 AI 时，纯色背景流程仍可完全离线运行。</p>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell"><span>PS2UI Studio · 离线抠图 · 开发者：郝利苗 · QQ：465852139</span><span><a href="./">返回首页</a> · <a href="https://github.com/Homer79980/ps-offline-mask-releases/releases/tag/v0.1.0" target="_blank" rel="noreferrer">下载与版本 ↗</a></span></footer>
+  </body>
+</html>

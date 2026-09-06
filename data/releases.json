@@ -131,6 +131,18 @@
       "releaseTag": "v1.0.32",
       "releaseUrl": "https://github.com/Homer79980/ps-slicer-releases/releases/tag/v1.0.32",
       "assets": ["com.tu.ps-slicer_PS.ccx"]
+    },
+    {
+      "id": "ps-offline-mask",
+      "name": "离线抠图",
+      "kind": "photoshop-tool",
+      "version": "0.1.0",
+      "supportedHosts": ["Photoshop 25.0+"],
+      "description": "本地优先移除纯色与近纯色背景，处理内部孔洞、软 Alpha 和边缘残色，并提供可选视觉模型辅助。",
+      "releaseRepository": "Homer79980/ps-offline-mask-releases",
+      "releaseTag": "v0.1.0",
+      "releaseUrl": "https://github.com/Homer79980/ps-offline-mask-releases/releases/tag/v0.1.0",
+      "assets": ["ps-offline-mask-0.1.0.ccx", "SHA256SUMS.txt"]
     }
   ]
 }
