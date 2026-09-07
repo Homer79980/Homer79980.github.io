@@ -38,11 +38,11 @@
         <div class="tool-download-copy">
           <p class="eyebrow">DOWNLOAD</p>
           <h2>一个 CCX，包含本地抠图和精修工作流</h2>
-          <p>下载后先尝试双击安装。当前 CCX 尚未经过 Adobe Marketplace 签名；若 Creative Cloud 拒绝未签名包，可使用 UXP Developer Tool 加载同一安装包内的插件目录。</p>
+          <p>当前 CCX 由 Adobe UXP Developer Tools 2.2.1 生成，并已通过 Windows 官方安装器验证。双击后在 Creative Cloud 中选择“本地安装”；如果之前遇到错误代码 -1，请重新下载并核对新校验值。</p>
           <div class="tool-download-actions"><a class="button button-primary" href="https://github.com/Homer79980/ps-offline-mask-releases/releases/download/v0.1.0/ps-offline-mask-0.1.0.ccx">直接下载 CCX</a><a class="button button-quiet" href="https://github.com/Homer79980/ps-offline-mask-releases/releases/tag/v0.1.0" target="_blank" rel="noreferrer">版本与校验值 ↗</a></div>
           <p class="tool-note">安装包支持 Photoshop 25.0+。默认走本地算法；只有在 AI 设置中主动配置服务、授权外发且本地结果需要辅助时，单张图片才会发送给视觉服务。</p>
         </div>
-        <aside class="download-spec" aria-label="离线抠图版本信息"><span>CURRENT RELEASE</span><strong>离线抠图 0.1.0</strong><small>Photoshop 25.0+<br />CCX · SHA-256 可校验</small></aside>
+        <aside class="download-spec" aria-label="离线抠图版本信息"><span>CURRENT RELEASE</span><strong>离线抠图 0.1.0</strong><small>Photoshop 25.0+<br />228,965 bytes · UDT CCX</small></aside>
       </section>
 
       <section class="section-shell tool-detail-grid">
@@ -58,10 +58,10 @@
           <p>先停止并移除旧实例，避免 Photoshop 同时加载两个版本。</p>
         </div>
         <div class="tool-detail-grid">
-          <article class="tool-detail"><span class="guide-kicker">01 / DOWNLOAD</span><h3>下载并校验</h3><p>从 v0.1.0 Release 下载 CCX；需要校验时，对照同一 Release 中的 SHA256SUMS.txt。</p></article>
-          <article class="tool-detail"><span class="guide-kicker">02 / INSTALL</span><h3>先双击 CCX</h3><p>让 Creative Cloud 完成安装，重启 Photoshop 后从“增效工具”菜单打开“离线抠图”。</p></article>
-          <article class="tool-detail"><span class="guide-kicker">03 / DEV LOAD</span><h3>未签名包的备用安装</h3><p>若 Creative Cloud 拒绝安装，把 CCX 复制并改名为 ZIP，解压后在 UXP Developer Tool 中 Add Plugin，选择根目录的 manifest.json，再点击 Load。</p></article>
-          <article class="tool-detail"><span class="guide-kicker">04 / UPDATE</span><h3>升级不覆盖旧目录</h3><p>在 UXP Developer Tool 中 Stop 并移除旧版本，再加载新目录。菜单中应只保留一个“离线抠图”入口。</p></article>
+          <article class="tool-detail"><span class="guide-kicker">01 / DOWNLOAD</span><h3>下载并校验</h3><p>从 v0.1.0 Release 下载 CCX；SHA-256 应以 0E38D53A 开头，并与 SHA256SUMS.txt 完全一致。</p></article>
+          <article class="tool-detail"><span class="guide-kicker">02 / INSTALL</span><h3>双击 CCX</h3><p>在 Creative Cloud 中选择“本地安装”，完成后重启 Photoshop，再从“增效工具”菜单打开“离线抠图”。</p></article>
+          <article class="tool-detail"><span class="guide-kicker">03 / ERROR -1</span><h3>清理旧下载</h3><p>旧同名包会触发错误代码 -1。删除旧下载，并在 Creative Cloud“管理插件”中卸载残留的 0.1.0，再安装新包。</p></article>
+          <article class="tool-detail"><span class="guide-kicker">04 / DEV LOAD</span><h3>开发者加载备用路径</h3><p>若新包仍失败，将 CCX 改名为 ZIP 并解压，在 UXP Developer Tool 中 Add Plugin，选择根目录 manifest.json 后点击 Load。</p></article>
         </div>
       </section>
 
