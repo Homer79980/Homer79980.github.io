@@ -4,7 +4,7 @@
   var versionNodes = document.querySelectorAll("[data-product-version]");
   if (!versionNodes.length) return;
 
-  fetch("./data/releases.json?v=ps2ui-2.1.16", { cache: "no-store" })
+  fetch("./data/releases.json?v=ps2ui-2.1.17", { cache: "no-store" })
     .then(function (response) {
       if (!response.ok) throw new Error("release manifest unavailable");
       return response.json();
