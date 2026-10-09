@@ -113,13 +113,13 @@
       "id": "pixel-color-bleed",
       "name": "Pixel Color Bleed",
       "kind": "photoshop-tool",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "supportedHosts": ["Photoshop 2022+"],
-      "description": "顺着原图的颜色走势生成新像素，内部实心、外缘圆润抗锯齿，支持连续滑块调节。",
+      "description": "顺着原图的颜色走势生成新像素，色块主体清晰、交界过渡细腻、外轮廓圆润抗锯齿。",
       "releaseRepository": "Homer79980/Pixel-Color-Bleed-Releases",
-      "releaseTag": "v0.1.3",
-      "releaseUrl": "https://github.com/Homer79980/Pixel-Color-Bleed-Releases/releases/tag/v0.1.3",
-      "assets": ["pixel-color-bleed-0.1.3.ccx", "pixel-color-bleed-0.1.3-SHA256.txt"]
+      "releaseTag": "v0.1.5",
+      "releaseUrl": "https://github.com/Homer79980/Pixel-Color-Bleed-Releases/releases/tag/v0.1.5",
+      "assets": ["pixel-color-bleed-0.1.5.ccx", "pixel-color-bleed-0.1.5-SHA256.txt"]
     },
     {
       "id": "ps-slicer",
