@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#111518" />
-    <meta name="description" content="Pixel Color Bleed 沿图层原有的颜色走势和轮廓方向向周围扩展像素。" />
+    <meta name="description" content="Pixel Color Bleed 0.1.3 沿图层原有的颜色走势向周围扩展像素，内部实心、外缘圆润抗锯齿，支持连续滑块调节。" />
     <title>Pixel Color Bleed | PS2UI Studio</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -25,11 +25,11 @@
     <main id="top">
       <section class="tool-page-hero section-shell">
         <div class="tool-page-copy">
-          <p class="eyebrow">PIXEL COLOR BLEED / 0.1.1</p>
+          <p class="eyebrow">PIXEL COLOR BLEED / 0.1.3</p>
           <h1>沿着颜色走势，向周围扩展。</h1>
-          <p class="hero-lead">Pixel Color Bleed 读取图层的 RGBA 结构，结合轮廓曲线、邻近颜色与局部方向逐层向周围生成新像素。它延续原有色带和结构，不是把最外圈颜色简单复制到四周。</p>
-          <div class="hero-actions"><a class="button button-primary" href="https://github.com/Homer79980/Pixel-Color-Bleed-Releases/releases/download/v0.1.1/pixel-color-bleed-0.1.1.ccx">直接下载 Photoshop 插件 <span aria-hidden="true">↓</span></a><a class="button button-quiet" href="https://github.com/Homer79980/Pixel-Color-Bleed-Releases/releases/latest" target="_blank" rel="noreferrer">查看版本 ↗</a></div>
-          <div class="hero-facts" aria-label="Pixel Color Bleed 信息"><span><strong>0.1.1</strong> 当前版本</span><span><strong>RGBA</strong> 图层结构</span><span><strong>NON-DESTRUCTIVE</strong> 原图不变</span></div>
+          <p class="hero-lead">Pixel Color Bleed 读取图层的 RGBA 结构，结合轮廓曲线、邻近颜色与局部方向逐层向周围生成新像素，延续原有色带和结构。0.1.3 改善滑块拖动与外轮廓抗锯齿，让扩展边缘更圆润细腻。</p>
+          <div class="hero-actions"><a class="button button-primary" href="https://github.com/Homer79980/Pixel-Color-Bleed-Releases/releases/download/v0.1.3/pixel-color-bleed-0.1.3.ccx">直接下载 Photoshop 插件 <span aria-hidden="true">↓</span></a><a class="button button-quiet" href="https://github.com/Homer79980/Pixel-Color-Bleed-Releases/releases/latest" target="_blank" rel="noreferrer">查看版本 ↗</a></div>
+          <div class="hero-facts" aria-label="Pixel Color Bleed 信息"><span><strong>0.1.3</strong> 当前版本</span><span><strong>RGBA</strong> 图层结构</span><span><strong>NON-DESTRUCTIVE</strong> 原图不变</span></div>
         </div>
         <div class="tool-page-visual pixel-bleed-visual"><a href="./assets/pixel-color-bleed-demo.png" target="_blank" rel="noreferrer"><img src="./assets/pixel-color-bleed-demo.png" alt="Pixel Color Bleed 沿颜色走势向周围扩展示意图" /></a></div>
       </section>
@@ -40,10 +40,10 @@
       </section>
 
       <section class="section-shell tool-detail-grid">
-        <article class="tool-detail"><span class="guide-kicker">01 / CONTOUR</span><h3>先找可靠走势</h3><p>读取 RGBA 像素，结合轮廓内外的颜色关系判断可靠的延伸方向，让新像素延续主体原有的颜色变化。</p></article>
+        <article class="tool-detail"><span class="guide-kicker">01 / CONTOUR</span><h3>圆润细腻的轮廓</h3><p>保留原图半透明边缘信息，沿圆形距离向外扩展，让圆弧与斜边平滑过渡，同时延续主体原有的颜色变化。</p></article>
         <article class="tool-detail"><span class="guide-kicker">02 / OUTER SPACE</span><h3>向周围可用区域扩展</h3><p>扩展范围以主体外侧为主，主体包围的孔洞和内部结构保持原样，不改变画面原有的内部关系。</p></article>
         <article class="tool-detail"><span class="guide-kicker">03 / LAYERED GROWTH</span><h3>沿走势逐层外推</h3><p>综合外法线、轮廓曲线和邻近颜色方向，一层一层生成；颜色带、弧线和局部结构会继续向外延伸，而不是放射状复制。</p></article>
-        <article class="tool-detail"><span class="guide-kicker">04 / OUTPUT</span><h3>实心、可回退</h3><p>生成像素会融合并固定为 100% 不透明，向主体内重叠少量像素以减少缝隙；原图不改，扩散结果放在下方新图层。色相、饱和度和明度只作用于新像素。</p></article>
+        <article class="tool-detail"><span class="guide-kicker">04 / OUTPUT</span><h3>实心内部，细腻外缘</h3><p>生成层内部保持实心，最外缘使用细腻的半透明抗锯齿过渡，向主体内重叠少量像素以减少缝隙。扩散结果放在原图下方的新图层；色相、饱和度和明度可通过滑块连续调节，只作用于新像素。</p></article>
       </section>
     </main>
 
